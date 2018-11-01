@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -11,6 +12,7 @@ import { IndustriesComponent } from './components/industries/industries.componen
 import { ProductsComponent } from './components/products/products.component';
 import { CommunityComponent } from './components/community/community.component';
 import { AboutComponent } from './components/about/about.component';
+import { DataProvider } from './providers/data-provider';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { AboutComponent } from './components/about/about.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'home', component: HomeComponent },
@@ -36,7 +39,7 @@ import { AboutComponent } from './components/about/about.component';
       { path: 'community', component: CommunityComponent }
     ])
   ],
-  providers: [],
+  providers: [DataProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
