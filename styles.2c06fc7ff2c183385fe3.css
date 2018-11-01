@@ -1,0 +1,1 @@
+div{left:50vh;top:15vh;-webkit-animation:.5s forwards slide;animation:.5s forwards slide}h1,h2,h3,h4,h5,h6,p{right:15vh;top:15vh;-webkit-animation:.1s forwards slide;animation:.1s forwards slide}@-webkit-keyframes slide{100%{left:0;top:0}}@keyframes slide{100%{left:0;top:0}}
