@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+
+div{
+    left:50vh;
+    top: 15vh;
+    -webkit-animation: slide 0.5s forwards;
+    -webkit-animation-delay: 0.2s;
+    animation: slide 0.5s forwards;
+    animation-delay: 0s;
+}
+
+p,h1,h2,h3,h4,h5,h6{
+    right:15vh;
+    top: 15vh;
+    -webkit-animation: slide 0.1s forwards;
+    -webkit-animation-delay: 0s;
+    animation: slide 0.1s forwards;
+    animation-delay: 0s;
+}
+
+@-webkit-keyframes slide {
+    100% { left: 0;top:0vh; }
+}
+
+@keyframes slide {
+    100% { left: 0;top:0vh; }
+}

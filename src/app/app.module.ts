@@ -36,7 +36,8 @@ import { DataProvider } from './providers/data-provider';
       { path: 'industries', component: IndustriesComponent },
       { path: 'products', component: ProductsComponent },
       { path: 'about', component: AboutComponent },
-      { path: 'community', component: CommunityComponent }
+      { path: 'community', component: CommunityComponent },
+      { path: '*', component: HomeComponent }
     ])
   ],
   providers: [DataProvider],
