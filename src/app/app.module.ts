@@ -13,6 +13,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { CommunityComponent } from './components/community/community.component';
 import { AboutComponent } from './components/about/about.component';
 import { DataProvider } from './providers/data-provider';
+import { ServiceDetailsComponent } from './components/services/service-details/service-details.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { DataProvider } from './providers/data-provider';
     IndustriesComponent,
     ProductsComponent,
     CommunityComponent,
-    AboutComponent
+    AboutComponent,
+    ServiceDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,11 @@ import { DataProvider } from './providers/data-provider';
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'home', component: HomeComponent },
-      { path: 'services', component: ServicesComponent },
+      {
+        path: 'services', component: ServicesComponent, children: [{
+          path: 'details', component: ServiceDetailsComponent
+        }]
+      },
       { path: 'industries', component: IndustriesComponent },
       { path: 'products', component: ProductsComponent },
       { path: 'about', component: AboutComponent },

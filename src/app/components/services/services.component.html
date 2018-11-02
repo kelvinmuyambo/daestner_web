@@ -7,8 +7,13 @@
         <h1>
           Our Services
         </h1>
-        <p class="link-nav"><a href="">Home </a> <span class="lnr lnr-chevron-right"></span> <a href="/services">
-            Services</a></p>
+        <p class="link-nav">
+          <a routerLink="/">Home </a>
+          <span class="lnr lnr-chevron-right"></span>
+          <a routerLink="/services" (click)="unselect()">Services</a>
+          <span class="lnr lnr-chevron-right" *ngIf="service"></span>
+          <a *ngIf="service">{{service.name}}</a>
+        </p>
       </div>
     </div>
   </div>
@@ -17,7 +22,7 @@
 
 <!-- Start service Area -->
 <section class="service-area">
-  <div class="container">
+  <div class="container" *ngIf="!service">
     <div class="row p-5">
       <p class="col-1 offset-1">
         <img src="assets/img/quote.png" width="50" />
@@ -33,14 +38,14 @@
     <br />
     <div class="row">
       <div class="col-lg-4" *ngFor="let item of services">
-        <div class="single-service">
+        <div class="single-service" (click)="select(item)">
           <div class="thumb">
             <img src="{{item.image}}" alt="">
           </div>
           <h4>{{item.name}}</h4>
           <p>{{item.description | slice:0:200}}......
           </p>
-          <a href="#" class="primary-btn header-btn text-uppercase">Learn More</a>
+          <button class="primary-btn header-btn text-uppercase">Learn More</button>
           <br />
           <hr />
           <br />
@@ -48,6 +53,9 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="container" *ngIf="service">
+    <app-service-details [service]="service"></app-service-details>
   </div>
 </section>
 <!-- End service Area -->

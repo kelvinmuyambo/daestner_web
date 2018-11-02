@@ -25,10 +25,19 @@ export class ServicesComponent implements OnInit {
       image: 'assets/img/service/technology.jpg'
     }
   ];
+  service: any;
 
   constructor() {
   }
 
   ngOnInit() {
+  }
+
+  select(service) {
+    this.service = service;
+  }
+
+  unselect(){
+    this.service = null;
   }
 }
