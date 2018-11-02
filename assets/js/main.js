@@ -35,23 +35,6 @@ $(document).ready(function(){
         fixedContentPos: false
     });
 
-    
-  //  Counter Js 
-
-  $('.counter').counterUp({
-      delay: 10,
-      time: 1000
-  });
-
-
-  // Initiate superfish on nav menu
-  $('.nav-menu').superfish({
-    animation: {
-      opacity: 'show'
-    },
-    speed: 400
-  });
-
   // Mobile Navigation
   if ($('#nav-menu-container').length) {
     var $mobile_nav = $('#nav-menu-container').clone().prop({
