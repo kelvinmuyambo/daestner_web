@@ -35,7 +35,7 @@ import { ServiceDetailsComponent } from './components/services/service-details/s
       { path: '', component: HomeComponent },
       { path: 'home', component: HomeComponent },
       {
-        path: 'services', component: ServicesComponent, children: [{
+        path: 'solutions', component: ServicesComponent, children: [{
           path: 'details', component: ServiceDetailsComponent
         }]
       },

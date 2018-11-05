@@ -1,0 +1,12 @@
+.spacer{
+    white-space: pre-line;
+}
+
+.main-text{
+    text-align: center;
+    font-weight: 600;
+}
+
+.section-gap {
+    padding: 57px 0;
+}

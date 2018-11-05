@@ -5,12 +5,12 @@
     <div class="row d-flex align-items-center justify-content-center">
       <div class="about-content col-lg-12">
         <h1>
-          Our Services
+          Our Solutions
         </h1>
         <p class="link-nav">
           <a routerLink="/">Home </a>
           <span class="lnr lnr-chevron-right"></span>
-          <a routerLink="/services" (click)="unselect()">Services</a>
+          <a routerLink="/Solutions" (click)="unselect()">Solutions</a>
           <span class="lnr lnr-chevron-right" *ngIf="service"></span>
           <a *ngIf="service">{{service.name}}</a>
         </p>
